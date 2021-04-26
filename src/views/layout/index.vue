@@ -36,9 +36,6 @@
           <span>{{user.name}}</span>
           <i class="el-icon-arrow-down el-icon--right"></i>
           </div>
-          <!-- <span class="el-dropdown-link">
-      下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
-          </span> -->
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item command="a" @click.native="setting">设置</el-dropdown-item>
             <el-dropdown-item command="b" @click.native="onLogout">退出</el-dropdown-item>
@@ -56,7 +53,7 @@
 <script>
 import AppAside from './components/aside'
 import { getUserProfile } from '@/api/user'
-import globalBus from '@/utils/global-bus'
+// import globalBus from '@/utils/global-bus'
 export default {
   name: 'LayoutIndex',
   components: {
@@ -73,11 +70,11 @@ export default {
     this.loadUserProfile()
 
     // 注册自定义事件
-    globalBus.$on('update-user', (data) => {
-      console.log('update-user', data)
-      this.user.name = data.name
-      this.user.photo = data.photo
-    })
+    // globalBus.$on('update-user', (data) => {
+    //   console.log('update-user', data)
+    //   this.user.name = data.name
+    //   this.user.photo = data.photo
+    // })
   },
   methods: {
     loadUserProfile () {
@@ -101,9 +98,6 @@ export default {
           message: '已取消删除'
         })
       })
-    },
-    setting () {
-      this.$router.push('/settings')
     }
   }
 }
@@ -140,8 +134,4 @@ export default {
       margin-right: 10px;
     }
   }
-  .main{
-  background: url(./images/welcome.jpg) no-repeat;
-  background-position: center;
-}
 </style>

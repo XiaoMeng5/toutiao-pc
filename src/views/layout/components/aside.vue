@@ -1,12 +1,11 @@
 <template>
     <el-menu
       class="nav-menu"
-      default-active="2"
+      default-active="/"
       background-color="#002033"
       text-color="#fff"
       active-text-color="#ffd04b"
       router
-      :collapse='isCollapse'
     >
     <div class="logo" v-if="!isCollapse"></div>
       <el-menu-item class="suba" index="/">
@@ -50,20 +49,20 @@
 
 export default {
   name: 'AppAside',
-  components: {},
-  props: ['is-collapse'],
+  // components: {},
+  // props: ['is-collapse'],
   data () {
     return {
       // isCollapse: true
     }
   },
   methods: {
-    handleOpen (key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose (key, keyPath) {
-      console.log(key, keyPath)
-    }
+    // handleOpen (key, keyPath) {
+    //   console.log(key, keyPath)
+    // },
+    // handleClose (key, keyPath) {
+    //   console.log(key, keyPath)
+    // }
   }
 }
 </script>
