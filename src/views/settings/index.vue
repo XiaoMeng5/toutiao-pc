@@ -128,6 +128,9 @@ export default {
   created () {
     this.loadUser()
   },
+  mounted () {
+    console.log(this.$route)
+  },
   methods: {
     onUpdateUser () {
       // 开启loading 状态

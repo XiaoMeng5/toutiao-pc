@@ -1,13 +1,13 @@
 <template>
     <el-menu
       class="nav-menu"
-      default-active="/"
+      :default-active="$route.path"
       background-color="#002033"
       text-color="#fff"
       active-text-color="#ffd04b"
       router
     >
-    <div class="logo" v-if="!isCollapse"></div>
+    <div class="logo"></div>
       <el-menu-item class="suba" index="/">
         <i class="el-icon-s-home"></i>
         <span slot="title">首页</span>
@@ -56,6 +56,10 @@ export default {
       // isCollapse: true
     }
   },
+  mounted() {
+    console.log(this)
+  },
+
   methods: {
     // handleOpen (key, keyPath) {
     //   console.log(key, keyPath)

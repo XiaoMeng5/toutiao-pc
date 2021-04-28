@@ -156,6 +156,9 @@ export default {
       }
     }
   },
+  mounted () {
+    console.log(this.$route)
+  },
   created () {
     this.loadChannels() // 获取频道
     if (this.$route.query.id) {

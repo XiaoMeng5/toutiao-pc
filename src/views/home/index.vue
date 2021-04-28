@@ -1,5 +1,7 @@
 <template>
-  <div class="home-container"></div>
+  <div class="home-container">
+    <video src="./images/" autoplay loop muted></video>
+  </div>
 </template>
 
 <script>
